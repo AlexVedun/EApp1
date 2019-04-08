@@ -14,12 +14,14 @@ import java.io.Serializable;
 public class BookingModel implements Serializable {
     private static final long serialVersionUID = 1L;
     
-    private PersonModel person;
-    
     private Integer id;
     
-    private ProductModel product;
-
+    private String firstName;
+    
+    private String lastName;
+    
+    private String productName;
+        
     public BookingModel() {
     }
 
@@ -35,14 +37,30 @@ public class BookingModel implements Serializable {
         this.id = id;
     }
 
-    public ProductModel getProduct() {
-        return product;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setProduct(ProductModel product) {
-        this.product = product;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -66,13 +84,5 @@ public class BookingModel implements Serializable {
     @Override
     public String toString() {
         return "org.tyaa.ea1.entity.Booking[ id=" + id + " ]";
-    }
-
-    public PersonModel getPerson() {
-        return person;
-    }
-
-    public void setPerson(PersonModel person) {
-        this.person = person;
     }
 }

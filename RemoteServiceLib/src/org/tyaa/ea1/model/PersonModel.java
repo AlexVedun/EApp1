@@ -20,7 +20,7 @@ public class PersonModel implements Serializable {
     
     private String lastName;
     
-    private int age;
+    private Integer age;
 
     public PersonModel() {
     }
@@ -29,7 +29,7 @@ public class PersonModel implements Serializable {
         this.id = id;
     }
 
-    public PersonModel(Integer id, String firstName, String lastName, int age) {
+    public PersonModel(Integer id, String firstName, String lastName, Integer age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -60,11 +60,11 @@ public class PersonModel implements Serializable {
         this.lastName = lastName;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

@@ -20,8 +20,6 @@ public class ProductModel implements Serializable {
     
     private String productName;
     
-    private Collection<BookingModel> bookingCollection;
-
     public ProductModel() {
     }
 
@@ -48,15 +46,6 @@ public class ProductModel implements Serializable {
 
     public void setProductName(String productName) {
         this.productName = productName;
-    }
-
-    @XmlTransient
-    public Collection<BookingModel> getBookingCollection() {
-        return bookingCollection;
-    }
-
-    public void setBookingCollection(Collection<BookingModel> bookingCollection) {
-        this.bookingCollection = bookingCollection;
     }
 
     @Override
