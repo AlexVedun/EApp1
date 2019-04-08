@@ -29,8 +29,8 @@ public class Main {
         }
         for (BookingModel bookingModel : proxy.getBookings()) {
             System.out.println("Номер заказа: " + bookingModel.getId().toString());
-            System.out.println("Имя заказчика: " + bookingModel.getPerson().getFirstName());
-            System.out.println("Продукт: " + bookingModel.getProduct().getProductName());
+            System.out.println("Имя заказчика: " + bookingModel.getFirstName() + " " + bookingModel.getLastName());
+            System.out.println("Продукт: " + bookingModel.getProductName());
             System.out.println("");
         }
     }
