@@ -45,24 +45,11 @@ public class ServiceSessionBean implements ServiceSessionBeanRemote {
         
         return bookingFacade.findAll().stream().map((booking) -> {
             BookingModel bm = new BookingModel();
-            bm.setPerson(new PersonModel (
-                    booking.getPerson().getId(), 
-                    booking.getPerson().getFirstName(),
-                    booking.getPerson().getLastName(),
-                    booking.getPerson().getAge()));
-            bm.setProduct(new ProductModel(
-                    booking.getProduct().getId(),
-                    booking.getProduct().getProductName()));
+            bm.setId(booking.getId());
+            bm.setFirstName(booking.getPerson().getFirstName());
+            bm.setLastName(booking.getPerson().getLastName());
+            bm.setProductName(booking.getProduct().getProductName());
             return bm;
         }).collect(Collectors.toList());
-//        .forEachOrdered((bm) -> {
-//            bmList.add(bm);
-//        });
-//        return bmList;
-//        return bookingFacade.findAll().stream()
-//                .map(((p) -> {
-//                    BookingModel bm = new BookingModel;
-//                    return new BookingModel(p.getId(), p.getPerson(), p.getProduct());
-//                }))
     }
 }
